@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPad Stream Chat Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1e1e1e;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    iframe {
+      border: none;
+      flex: 1;
+      width: 100%;
+    }
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .chat-title {
+      background-color: #111;
+      text-align: center;
+      padding: 8px;
+      font-size: 1rem;
+      border-bottom: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-title">Twitch Chat</div>
+    <iframe src="https://www.twitch.tv/popout/Dendrxx/chat?popout=" allowfullscreen></iframe>
+    <div class="chat-title">TikTok Chat</div>
+    <iframe src="https://tiklives.com/overlay/Dendrxx" allowfullscreen></iframe>
+  </div>
+</body>
+</html>
