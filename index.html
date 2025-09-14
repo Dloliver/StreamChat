@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iPad Stream Chat Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dual Chat Overlay</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background-color: #1e1e1e;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
+      background: transparent;
       overflow: hidden;
     }
-    iframe {
-      border: none;
-      flex: 1;
-      width: 100%;
-    }
-    .chat-container {
+    .chat-wrapper {
       display: flex;
-      flex-direction: column;
-      height: 100%;
+      flex-direction: row;
+      width: 100vw;
+      height: 100vh;
     }
-    .chat-title {
-      background-color: #111;
-      text-align: center;
-      padding: 8px;
-      font-size: 1rem;
-      border-bottom: 1px solid #333;
+    .chat-frame {
+      flex: 1;
+      height: 100%;
+      border: none;
+      opacity: 0.95;
+    }
+    .left {
+      margin-right: 1px;
+    }
+    .right {
+      margin-left: 1px;
     }
   </style>
 </head>
 <body>
-  <div class="chat-container">
-    <div class="chat-title">Twitch Chat</div>
-    <iframe src="https://www.twitch.tv/popout/Dendrxx/chat?popout=" allowfullscreen></iframe>
-    <div class="chat-title">TikTok Chat</div>
-    <iframe src="https://tiklives.com/overlay/Dendrxx" allowfullscreen></iframe>
+  <div class="chat-wrapper">
+    <iframe
+      class="chat-frame left"
+      src="https://www.twitch.tv/popout/Dendrxx/chat?popout="
+    ></iframe>
+    <iframe
+      class="chat-frame right"
+      src="https://chat.restream.io/embed?token=714ecc40-7576-4445-b4dc-f20ddfd33079"
+    ></iframe>
   </div>
 </body>
 </html>
